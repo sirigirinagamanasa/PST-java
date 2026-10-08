@@ -1,0 +1,20 @@
+import java.time.LocalDate;
+
+public class NumberOfDaysBetweenTwoDates {
+
+    static int daysBetweenDates(String date1, String date2) {
+
+        LocalDate d1 = LocalDate.parse(date1);
+        LocalDate d2 = LocalDate.parse(date2);
+
+        return (int) Math.abs(d1.toEpochDay() - d2.toEpochDay());
+    }
+
+    public static void main(String[] args) {
+
+        String date1 = "2019-06-29";
+        String date2 = "2019-06-30";
+
+        System.out.println(daysBetweenDates(date1, date2));
+    }
+}
